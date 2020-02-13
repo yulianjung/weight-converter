@@ -17,6 +17,16 @@ input.addEventListener('input', (e) => {
   let ounces = document.getElementById('ozOutput');
   ounces.innerHTML = lbs*16;
 
+  let verdict = document.getElementById('verdictOutput');
+  if (ounces.innerHTML > 3248) {
+    verdict.innerHTML = "YOU FAT FUCK!! EAT LESS!";
+  }
+
+  if (ounces.innerHTML < 3248) {
+    verdict.innerHTML = "EAT MORE!!!";
+  }
+
+
   e.preventDefault();
 });
 
